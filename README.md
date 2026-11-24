@@ -1,6 +1,6 @@
 # Did wages beat inflation? · ¿Le ganaron los sueldos a la inflación?
 
-**▶ Live app / App online: [dashboard-salarios-inflacion-vibe-coded.streamlit.app](https://dashboard-salarios-inflacion-vibe-coded-gpdhngjafuthuk8aidv7p7.streamlit.app/)** ([English](https://dashboard-salarios-inflacion-vibe-coded-gpdhngjafuthuk8aidv7p7.streamlit.app/?lang=en))
+**▶ [Open the live dashboard (English)](https://dashboard-salarios-inflacion-vibe-coded-gpdhngjafuthuk8aidv7p7.streamlit.app/?lang=en) · [Abrir el dashboard online (español)](https://dashboard-salarios-inflacion-vibe-coded-gpdhngjafuthuk8aidv7p7.streamlit.app/)**
 
 **[English](#english) · [Español](#español)**
 
