@@ -11,6 +11,8 @@
 An interactive dashboard that answers one question with official data: **did wages in Argentina keep up with prices?**
 It shows the *real wage* (the purchasing power of wages) by sector since 2016, built from INDEC's consumer price index and wage index.
 
+> **Vibe coded:** built step by step with [Claude Code](https://claude.com/claude-code) as an AI pair programmer. I made the design and analysis decisions (data sources, how to treat missing months, correcting the unregistered-wage lag); the AI wrote most of the code, and every piece is covered by tests or checked by hand.
+
 ### How to read it
 
 - **100 = what a salary could buy in the base month** you choose.
@@ -72,6 +74,8 @@ Refresh the data and run the tests:
 
 Un dashboard interactivo que responde una pregunta con datos oficiales: **¿los sueldos en Argentina le ganaron a los precios?**
 Muestra el *salario real* (el poder de compra del sueldo) por sector desde 2016, a partir del IPC y el índice de salarios del INDEC.
+
+> **Vibe coded:** construido paso a paso con [Claude Code](https://claude.com/claude-code) como programador de IA en pareja. Yo tomé las decisiones de diseño y de análisis (fuentes de datos, qué hacer con los meses sin dato, corregir el rezago de los no registrados); la IA escribió la mayor parte del código, y cada parte está cubierta por tests o verificada a mano.
 
 ### Cómo leerlo
 
