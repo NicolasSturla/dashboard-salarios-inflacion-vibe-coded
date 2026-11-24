@@ -1,6 +1,11 @@
 import pytest
 
-from src.calculations import real_wage, rebase
+from src.calculations import real_wage, rebase, shift_months
+
+
+def test_shift_months_crosses_year_boundary():
+    series = [("2024-03-01", 7.0), ("2024-08-01", 9.0)]
+    assert shift_months(series, 5) == [("2023-10-01", 7.0), ("2024-03-01", 9.0)]
 
 
 def test_rebase_sets_base_date_to_100():

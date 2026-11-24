@@ -7,7 +7,7 @@
   "delta": "{change:+.1f}% vs. {base}",
   "y_axis": "Salario real (base = 100)",
   "base_line": "Mes base = 100",
-  "source": "Fuente: INDEC, vía API Series de Tiempo (datos.gob.ar). IPC hasta {cpi_end}; los salarios se publican con unos 2 meses de atraso, por eso las líneas terminan antes. La serie de privados no registrados es muy volátil y el INDEC la publica con rezago: interpretarla con cuidado.",
+  "source": "Fuente: INDEC, vía API Series de Tiempo (datos.gob.ar). IPC hasta {cpi_end}; los salarios se publican con unos 2 meses de atraso, por eso las líneas terminan antes. Privados no registrados: el INDEC la estima con la Encuesta Permanente de Hogares y tiene 5 meses de rezago (el dato publicado como agosto refleja sueldos de marzo); acá se corrió 5 meses hacia atrás para compararla con los precios del mes que mide, por eso termina antes. Es más volátil que las demás. El total la incluye sin corregir (pesa alrededor del 20%).",
   "wages_total": "Total",
   "wages_private_registered": "Privado registrado",
   "wages_public": "Público",

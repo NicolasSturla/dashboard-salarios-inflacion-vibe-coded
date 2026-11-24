@@ -7,7 +7,7 @@
   "delta": "{change:+.1f}% vs. {base}",
   "y_axis": "Real wage (base = 100)",
   "base_line": "Base month = 100",
-  "source": "Source: INDEC, via the Series de Tiempo API (datos.gob.ar). CPI up to {cpi_end}; wages are published about 2 months later, so their lines end earlier. The unregistered private-sector series is very volatile and INDEC publishes it with a lag: read it with care.",
+  "source": "Source: INDEC, via the Series de Tiempo API (datos.gob.ar). CPI up to {cpi_end}; wages are published about 2 months later, so their lines end earlier. Private, unregistered: INDEC estimates it from its household survey (EPH) with a 5-month lag (the value published for August reflects March wages); here it is shifted 5 months back so it is compared with the prices of the month it measures, which is why it ends earlier. It is more volatile than the others. The total includes it uncorrected (about 20% weight).",
   "wages_total": "Total",
   "wages_private_registered": "Private, registered",
   "wages_public": "Public sector",

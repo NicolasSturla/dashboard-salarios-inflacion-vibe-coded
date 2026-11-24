@@ -62,7 +62,7 @@ Refresh the data and run the tests:
 
 - **CPI** (`148.3_INIVELNAL_DICI_M_26`) and **wage index** series (`149.1_…`) from INDEC, via the [Series de Tiempo API](https://apis.datos.gob.ar/series/api/) of datos.gob.ar.
 - Wages are published about two months after CPI, so wage lines end earlier.
-- The **unregistered private-sector** series is very volatile and INDEC publishes it with a lag. It is left out of the default view.
+- The **unregistered private-sector** series comes from INDEC's household survey (EPH) and has a **5-month lag**: the value published for August reflects March wages. The dashboard shifts it 5 months back before comparing it with CPI; without this, the 2024 drop looks far deeper than it was (minimum 37 instead of 54, base Jan-2017). It stays out of the default view, and the total index includes it uncorrected (~20% weight).
 
 ---
 
@@ -124,4 +124,4 @@ Actualizar los datos y correr los tests:
 
 - **IPC** (`148.3_INIVELNAL_DICI_M_26`) e **índices de salarios** (`149.1_…`) del INDEC, vía la [API Series de Tiempo](https://apis.datos.gob.ar/series/api/) de datos.gob.ar.
 - Los salarios se publican unos dos meses después que el IPC, por eso sus líneas terminan antes.
-- La serie de **privados no registrados** es muy volátil y el INDEC la publica con rezago. No aparece en la vista inicial.
+- La serie de **privados no registrados** sale de la Encuesta Permanente de Hogares (EPH) y tiene **5 meses de rezago**: el dato publicado como agosto refleja sueldos de marzo. El dashboard la corre 5 meses hacia atrás antes de compararla con el IPC; sin esa corrección, la caída de 2024 parece mucho más profunda de lo que fue (mínimo 37 en vez de 54, base ene-2017). No aparece en la vista inicial, y el índice total la incluye sin corregir (pesa ~20%).

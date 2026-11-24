@@ -3,9 +3,10 @@
 import plotly.graph_objects as go
 import streamlit as st
 
-from src.calculations import real_wage
+from src.calculations import real_wage, shift_months
 from src.database import connect, load_series
 from src.i18n import LANGUAGES, t
+from src.sources import PUBLICATION_LAG_MONTHS
 
 WAGE_SERIES = ["wages_total", "wages_private_registered", "wages_public", "wages_private_unregistered"]
 DEFAULT_SELECTION = WAGE_SERIES[:3]  # unregistered left out until its meaning is verified
@@ -16,6 +17,9 @@ def load_all() -> dict[str, list[tuple[str, float]]]:
     conn = connect()
     data = {name: load_series(conn, name) for name in ["cpi", *WAGE_SERIES]}
     conn.close()
+    # Undo publication lags so each value is compared with the prices of the month it measures.
+    for name, lag in PUBLICATION_LAG_MONTHS.items():
+        data[name] = shift_months(data[name], lag)
     return data
 
 

@@ -20,6 +20,19 @@ def rebase(series: Series, base_date: str) -> Series:
     return [(date, value / base * 100) for date, value in series]
 
 
+def shift_months(series: Series, months: int) -> Series:
+    """Move every date `months` months earlier (values unchanged).
+
+    Used to undo a publication lag: if a value labelled August really describes
+    March, shifting it 5 months back compares it with March prices, not August's.
+    """
+    shifted = []
+    for date, value in series:
+        total = int(date[:4]) * 12 + int(date[5:7]) - 1 - months  # months since year 0
+        shifted.append((f"{total // 12}-{total % 12 + 1:02d}-01", value))
+    return shifted
+
+
 def real_wage(wages: Series, cpi: Series, base_date: str) -> Series:
     """Purchasing power of wages, 100 = same as on base_date.
 

@@ -14,6 +14,11 @@ SERIES = {
     "wages_registered": "149.1_TL_REGIADO_OCTU_0_16",
 }
 
+# Months between the date a value is labelled with and the period it really measures.
+# INDEC: the unregistered private-sector index comes from the household survey (EPH) and
+# "tiene un rezago de cinco meses" (wage index press release / methodology N°16).
+PUBLICATION_LAG_MONTHS = {"wages_private_unregistered": 5}
+
 
 def fetch_series(series_id: str) -> list[tuple[str, float]]:
     """Return the full history of one series as a list of (date, value).
