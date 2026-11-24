@@ -22,8 +22,11 @@ def load_all() -> dict[str, list[tuple[str, float]]]:
 # Page config must be the first Streamlit call, before the language is known: title in both.
 st.set_page_config(page_title="Salarios vs. inflación | Wages vs. inflation", layout="wide")
 
+# ?lang=en in the URL opens the page in English (handy for sharing); anything unknown -> Spanish.
+url_lang = st.query_params.get("lang", "es")
 lang = st.radio(
     "Idioma / Language", options=list(LANGUAGES), format_func=LANGUAGES.get,
+    index=list(LANGUAGES).index(url_lang) if url_lang in LANGUAGES else 0,
     horizontal=True, label_visibility="collapsed",
 )
 
