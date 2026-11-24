@@ -1,2 +1,4 @@
 requests>=2.34
+streamlit>=1.67
+plotly>=7.1
 pytest>=9.0
