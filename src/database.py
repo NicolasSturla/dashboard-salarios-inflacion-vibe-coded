@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS series (
 CREATE TABLE IF NOT EXISTS observations (
     series_name TEXT NOT NULL REFERENCES series(name),
     date        TEXT NOT NULL,  -- ISO date, first day of the month: '2017-01-01'
-    value       REAL NOT NULL,
+    value       REAL NOT NULL,  -- months without data are skipped upstream, never stored as NULL or 0
     PRIMARY KEY (series_name, date)
 );
 """

@@ -12,6 +12,11 @@ def main() -> None:
     conn = connect()
     for name, api_id in SERIES.items():
         rows = fetch_series(api_id)
+        if not rows:
+            # Empty series (API problem or every month was None): keep the data we already had
+            # instead of crashing on rows[0] below.
+            print(f"WARNING: {name} came back empty, nothing saved")
+            continue
         save_series(conn, name, api_id, rows)
         print(f"{name:28} {len(rows):4} months  {rows[0][0]} -> {rows[-1][0]}")
     conn.close()

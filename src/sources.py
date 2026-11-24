@@ -26,7 +26,14 @@ def fetch_series(series_id: str) -> list[tuple[str, float]]:
     response.raise_for_status()  # stop with a clear error if the API answered 4xx/5xx
     rows = response.json()["data"]  # e.g. [["2016-12-01", 100.0], ["2017-01-01", 101.5859], ...]
 
-    # Skip months without data (None): a missing month is honest; 0 would break wage / CPI.
+    # Missing data: the API sends None for a month it has no value for. Three options were considered:
+    #   - Keep None: every later step (database, calculations, chart) would need to handle "no value".
+    #   - Use 0:     wrong. 0 means "the index is zero", not "unknown", and real wage = wage / CPI
+    #                would divide by zero or show a fake collapse in the chart.
+    #   - Skip it:   chosen. The month simply does not exist in our data, which is the truth.
+    # Similar cases handled elsewhere:
+    #   - A series that comes back completely empty -> update_data.py warns and saves nothing.
+    #   - CPI and wages ending in different months -> calculations must use only months present in both.
     return [(date, value) for date, value in rows if value is not None]
 
 
