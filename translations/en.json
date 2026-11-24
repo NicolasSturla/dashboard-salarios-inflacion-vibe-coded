@@ -1,0 +1,15 @@
+{
+  "title": "Did wages beat inflation?",
+  "intro": "Purchasing power of wages in Argentina. **100 = what could be bought in the base month.** Above 100, wages beat prices; below 100, they lost.",
+  "sectors": "Sectors",
+  "base_month": "Base month",
+  "pick_a_sector": "Pick at least one sector.",
+  "delta": "{change:+.1f}% vs. {base}",
+  "y_axis": "Real wage (base = 100)",
+  "base_line": "Base month = 100",
+  "source": "Source: INDEC, via the Series de Tiempo API (datos.gob.ar). CPI up to {cpi_end}; wages are published about 2 months later, so their lines end earlier. The unregistered private-sector series is very volatile and INDEC publishes it with a lag: read it with care.",
+  "wages_total": "Total",
+  "wages_private_registered": "Private, registered",
+  "wages_public": "Public sector",
+  "wages_private_unregistered": "Private, unregistered"
+}

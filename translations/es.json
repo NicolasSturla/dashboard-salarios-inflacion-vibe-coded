@@ -1,0 +1,15 @@
+{
+  "title": "¿Le ganaron los sueldos a la inflación?",
+  "intro": "Poder de compra del salario en Argentina. **100 = lo que se podía comprar en el mes base.** Por encima de 100 los sueldos le ganaron a los precios; por debajo, perdieron.",
+  "sectors": "Sectores",
+  "base_month": "Mes base",
+  "pick_a_sector": "Elegí al menos un sector.",
+  "delta": "{change:+.1f}% vs. {base}",
+  "y_axis": "Salario real (base = 100)",
+  "base_line": "Mes base = 100",
+  "source": "Fuente: INDEC, vía API Series de Tiempo (datos.gob.ar). IPC hasta {cpi_end}; los salarios se publican con unos 2 meses de atraso, por eso las líneas terminan antes. La serie de privados no registrados es muy volátil y el INDEC la publica con rezago: interpretarla con cuidado.",
+  "wages_total": "Total",
+  "wages_private_registered": "Privado registrado",
+  "wages_public": "Público",
+  "wages_private_unregistered": "Privado no registrado"
+}
